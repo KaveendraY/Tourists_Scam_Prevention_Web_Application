@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Social Media Clone</title>
+    <link rel="stylesheet" type="text/css" href="../static/social.css">
+    <title>Image Upload</title>
+  </head>
+  <body>
+   
+  
+  </body>
+</html>
+  </head>
+  <body>
+    <header>
+      <h1>Travalie Thoughts</h1>
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="#">Profile</a></li>
+          <li><a href="#">News Feed</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section>
+      <h2>Welcome to our Social Media Clone!</h2>
+      <p>Here you can connect with friends and share your thoughts and ideas.</p>
+      <form>
+        <label for="message">Post a Message:</label>
+        <input type="text" id="message">
+      </form>
+      <button onclick="postMessage()">Post</button>
+      <div id="message-container"></div>
+      
+      <script>
+        function uploadImage() {
+          var input = document.getElementById("image-input");
+          var file = input.files[0];
+          var reader = new FileReader();
+          reader.onload = function() {
+            var preview = document.getElementById("image-preview");
+            var image = new Image();
+            image.src = reader.result;
+            preview.appendChild(image);
+          }
+          reader.readAsDataURL(file);
+        }
+      </script>
+ <form>
+  <input type="file" id="image-input">
+  <button type="button" onclick="uploadImage()">Upload</button>
+</form>
+<div id="image-preview"></div>
+
+
+    </section>
+    <section>
+      <h2>News Feed</h2>
+      <div id="news-feed"></div>
+    </section>
+    <footer>
+      <p>&copy; 2023 Travalie Thoughts</p>
+    </footer>
+    <script>
+      function postMessage() {
+        var message = document.getElementById("message").value;
+        var container = document.getElementById("message-container");
+        var newMessage = document.createElement("div");
+        newMessage.innerHTML = message;
+        container.appendChild(newMessage);
+      }
+
+      function displayMessages() {
+        var messages = document.getElementById("message-container").children;
+        var newsFeed = document.getElementById("news-feed");
+        for (var i = 0; i < messages.length; i++) {
+          var message = messages[i].innerHTML;
+          var newPost = document.createElement("div");
+          newPost.innerHTML = message;
+          newsFeed.appendChild(newPost);
+        }
+      }
+
+      // call the displayMessages() function when the page is loaded
+      window.onload = displayMessages;
+    </script>
+  </body>
+</html>

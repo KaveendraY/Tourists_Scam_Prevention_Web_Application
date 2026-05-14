@@ -1,0 +1,21 @@
+.card {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 30px;
+  }
+  .card video {
+    width: 100%;
+    height: auto;
+  }
+  .card .card-body {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    padding: 15px;
+    color: white;
+  }
+  .card .card-body h5 {
+    margin-bottom: 5px;
+  }
+  

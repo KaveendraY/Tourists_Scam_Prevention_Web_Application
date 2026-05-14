@@ -1,0 +1,30 @@
+/* Main container styles */
+main {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  /* Article styles */
+  article {
+    flex: 1;
+    margin-right: 30px;
+  }
+  
+  /* Image styles */
+  img {
+    width: 100%;
+    height: auto;
+  }
+  
+  /* Bootstrap styles */
+  .card {
+    width: 100%;
+  }
+  .card-img-top {
+    width: 100%;
+    height: auto;
+  }
+  .card-body {
+    padding: 20px;
+  }
+  
