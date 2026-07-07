@@ -101,7 +101,3 @@ The model file tourist_iteam.h5 is used by the Flask app for inference. If you w
 - Improve accuracy with a larger labeled dataset
 - Add user authentication and history tracking
 - Deploy the app to a cloud platform such as Render, Heroku, or Azure
-
-## License
-
-This project does not include a specific license file yet. If you plan to share it publicly, add an appropriate license such as MIT or Apache 2.0.
